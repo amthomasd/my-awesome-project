@@ -1,7 +1,65 @@
-h1 {
-  color: blueviolet;
+body {
+  font-family: "Quicksand", sans-serif;
 }
-h3 {
-  color: orange;
-  font-weight: bold;
+
+ul {
+  list-style-type: none;
+  text-align: left;
+}
+
+h2 {
+  font-size: 50px;
+  color: darkgray;
+}
+
+.locationInput {
+  margin-top: 25px;
+}
+
+.searchButton {
+  margin-top: 20px;
+}
+
+.useCurrentLocationButton {
+  margin-top: 20px;
+}
+
+.currentCard {
+  text-align: left;
+}
+
+.dayOneCard {
+  border: transparent;
+}
+
+.weatherImage {
+  font-size: 50px;
+}
+
+.units {
+  position: relative;
+  top: -25px;
+  font-size: 10px;
+  font-style: blue;
+  font-style: underline;
+}
+
+.cityName {
+  font-size: 35px;
+  color: darkgray;
+}
+
+.weatherImage {
+  font-size: 70px;
+  position: relative;
+  top: -20px;
+}
+
+.temperatureText {
+  font-size: 60px;
+  color: darkgray;
+}
+
+.weatherText {
+  font-size: 20px;
 }
