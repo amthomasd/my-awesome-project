@@ -12,6 +12,10 @@ h2 {
   color: darkgray;
 }
 
+.additionalWeatherDetails {
+  margin-top: 40px;
+}
+
 .locationInput {
   margin-top: 25px;
 }
@@ -22,6 +26,8 @@ h2 {
 
 .useCurrentLocationButton {
   margin-top: 20px;
+  float: left !important;
+  margin-left: -20px;
 }
 
 .currentCard {
@@ -32,16 +38,13 @@ h2 {
   border: transparent;
 }
 
-.weatherImage {
-  font-size: 50px;
-}
-
 .units {
   position: relative;
-  top: -25px;
+  top: -30px;
   font-size: 10px;
   font-style: blue;
   font-style: underline;
+  font-size: medium;
 }
 
 .cityName {
@@ -62,8 +65,18 @@ h2 {
 
 .weatherText {
   font-size: 20px;
+  text-transform: capitalize;
 }
 
 .openSourceFooter {
   text-align: center;
+}
+
+.weatherAppWrapper {
+  border: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+  /*background-color: cadetblue;*/
+  border-radius: 10px;
+  border-color: orangered;
+  border-width: 20px;
 }

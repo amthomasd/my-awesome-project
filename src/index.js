@@ -37,7 +37,7 @@ function updateSearchOutput(response) {
   ).innerHTML = `Humidity:${response.data.main.humidity}%`;
   document.querySelector("#wind").innerHTML = `Wind: ${Math.round(
     response.data.wind.speed
-  )}`;
+  )} Km/H`;
   document.querySelector("#feels-like").innerHTML = `Feels like: ${Math.round(
     response.data.main.feels_like
   )}`;

@@ -23,121 +23,109 @@
   <body>
     <form id="search-form">
       <div class="container">
-        <div class="card">
+        <div class="weatherAppWrapper">
           <div class="row">
-            <div class="card-body weatherArea">
-              <div class="row">
-                <div class="col-4">
-                  <div class="mb-3 locationInput">
-                    <input
-                      type="search"
-                      class="form-control"
-                      id="search-text-input"
-                      placeholder="Enter location"
-                      autofocus="on"
-                    />
-                  </div>
-                </div>
-                <div class="col-3 searchButton">
-                  <button type="submit" class="btn btn-primary btn-lg">
-                    Search
-                  </button>
-                </div>
-                <div class="col-3 useCurrentLocationButton">
-                  <button
-                    type="button"
-                    class="btn btn-success btn-lg"
-                    id="current-location"
-                  >
-                    Use current location
-                  </button>
-                </div>
+            <div class="col-4">
+              <div class="mb-3 locationInput">
+                <input
+                  type="search"
+                  class="form-control"
+                  id="search-text-input"
+                  placeholder="Enter location"
+                  autofocus="on"
+                />
               </div>
+            </div>
+            <div class="col-3 searchButton">
+              <button type="submit" class="btn btn-primary btn-lg">
+                Search
+              </button>
+            </div>
+            <div class="col-3 useCurrentLocationButton">
+              <button
+                type="button"
+                class="btn btn-success btn-lg"
+                id="current-location"
+              >
+                Use current location
+              </button>
+            </div>
+          </div>
 
-              <div class="row">
-                <div class="col-2">
-                  <ul>
-                    <li id="current-day-date-time"></li>
-                  </ul>
-                </div>
-                <div class="col-6">
-                  <div class="row cityName" id="city-name-output"></div>
-                  <div class="row">
-                    <div class="col-6">
-                      <div class="float-left">
-                        <span
-                          class="temperatureText"
-                          id="temperature-for-city"
-                        ></span
-                        ><span class="units">
-                          <a href="#" id="celsius-link">°C</a> |
-                          <a href="#" id="fahrenheit-link">°F</a>
-                        </span>
-                      </div>
-                    </div>
-                    <div class="col-3 weatherImage">
-                      <ul>
-                        <li>🌦</li>
-                        <li class="weatherText" id="weather-text"></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <ul>
-                    <li><span id="humidity"></span></li>
-                    <li><span id="wind"></span></li>
-                    <li><span id="feels-like"></span></li>
-                  </ul>
-                </div>
+          <div class="row">
+            <div class="col-3">
+              <div class="clearfix cityName" id="city-name-output"></div>
+              <div
+                class="float-left currentCard"
+                id="current-day-date-time"
+              ></div>
+              <div class="temperatureText">
+                <strong id="temperature-for-city"></strong>
+                <span class="units float-left">
+                  <a href="#" id="celsius-link">°C</a> |
+                  <a href="#" id="fahrenheit-link">°F</a>
+                </span>
               </div>
+            </div>
+            <div class="col-3 weatherImage">
+              <ul>
+                <li>🌦</li>
+                <li class="weatherText" id="weather-text"></li>
+              </ul>
+            </div>
+            <div class="col-4 additionalWeatherDetails">
+              <ul>
+                <li><span id="humidity"></span></li>
+                <li><span id="wind"></span></li>
+                <li><span id="feels-like"></span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
 
-              <div class="row">
-                <div class="col-2">
-                  <div class="card">
-                    <div class="card-body dayOneCard">
-                      <div class="row weatherImage">🌥</div>
-                      <div class="row">Sun 5/1</div>
-                      <div class="row">67 | 50</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-2">
-                  <div class="card">
-                    <div class="card-body dayTwoCard">
-                      <div class="row weatherImage">🌞</div>
-                      <div class="row">Sun 5/1</div>
-                      <div class="row">67 | 50</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-2">
-                  <div class="card">
-                    <div class="card-body dayThreeCard">
-                      <div class="row weatherImage">⛈</div>
-                      <div class="row">Sun 5/1</div>
-                      <div class="row">67 | 50</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-2">
-                  <div class="card">
-                    <div class="card-body dayFourCard">
-                      <div class="row weatherImage">🌥</div>
-                      <div class="row">Sun 5/1</div>
-                      <div class="row">67 | 50</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-2">
-                  <div class="card">
-                    <div class="card-body dayFiveCard">
-                      <div class="row weatherImage">🌥</div>
-                      <div class="row">Sun 5/1</div>
-                      <div class="row">67 | 50</div>
-                    </div>
-                  </div>
-                </div>
+        <div class="row">
+          <div class="col-2">
+            <div class="card">
+              <div class="card-body dayOneCard">
+                <div class="row weatherImage">🌥</div>
+                <div class="row">Sun 5/1</div>
+                <div class="row">67 | 50</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-2">
+            <div class="card">
+              <div class="card-body dayTwoCard">
+                <div class="row weatherImage">🌞</div>
+                <div class="row">Sun 5/1</div>
+                <div class="row">67 | 50</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-2">
+            <div class="card">
+              <div class="card-body dayThreeCard">
+                <div class="row weatherImage">⛈</div>
+                <div class="row">Sun 5/1</div>
+                <div class="row">67 | 50</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-2">
+            <div class="card">
+              <div class="card-body dayFourCard">
+                <div class="row weatherImage">🌥</div>
+                <div class="row">Sun 5/1</div>
+                <div class="row">67 | 50</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-2">
+            <div class="card">
+              <div class="card-body dayFiveCard">
+                <div class="row weatherImage">🌥</div>
+                <div class="row">Sun 5/1</div>
+                <div class="row">67 | 50</div>
               </div>
             </div>
           </div>
