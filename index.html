@@ -21,11 +21,11 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   </head>
   <body>
-    <form id="search-form">
       <div class="container">
         <div class="weatherAppWrapper">
+          <form id="search-form">
           <div class="row">
-            <div class="col-4">
+            <div class="col-5">
               <div class="mb-3 locationInput">
                 <input
                   type="search"
@@ -33,18 +33,19 @@
                   id="search-text-input"
                   placeholder="Enter location"
                   autofocus="on"
+                  autocomplete="off"
                 />
               </div>
             </div>
             <div class="col-3 searchButton">
-              <button type="submit" class="btn btn-primary btn-lg">
+              <button type="submit" class="btn btn-primary w-100">
                 Search
               </button>
             </div>
             <div class="col-3 useCurrentLocationButton">
               <button
                 type="button"
-                class="btn btn-success btn-lg"
+                class="btn btn-success w-100"
                 id="current-location"
               >
                 Use current location
@@ -131,9 +132,15 @@
               </div>
             </div>
           </div>
+              </form>
         </div>
       </div>
-    </form>
+
+
+
+    
+
+
     <div class="openSourceFooter">
       <a href="https://github.com/amthomasd/my-awesome-project" target="_blank"
         >Open Source</a
