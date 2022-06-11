@@ -43,6 +43,15 @@ function updateSearchOutput(response) {
   )}`;
   document.querySelector("#weather-text").innerHTML =
     response.data.weather[0].description;
+  document
+    .querySelector("#current-weather-icon")
+    .setAttribute(
+      "src",
+      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
+  document
+    .querySelector("#current-weather-icon")
+    .setAttribute("alt", response.data.weather[0].description);
 }
 
 function handleSubmit(event) {
