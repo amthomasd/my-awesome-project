@@ -25,6 +25,8 @@ function search(city) {
 function updateSearchOutput(response) {
   console.log(response);
 
+  fahrenheitTemperature = Math.round(response.data.main.temp);
+
   document.querySelector("#temperature-for-city").innerHTML = Math.round(
     response.data.main.temp
   );
@@ -114,17 +116,23 @@ function getCurrentPosition() {
   navigator.geolocation.getCurrentPosition(retrievePosition);
 }
 button.addEventListener("click", getCurrentPosition);
-search("Butler");
-/*function convertToCelsius(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = 19;
-}
 
 function convertToFahrenheit(event) {
   event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = 66;
+  document.querySelector("#temperature-for-city").innerHTML =
+    fahrenheitTemperature;
+
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+}
+
+function convertToCelsius(event) {
+  event.preventDefault();
+  document.querySelector("#temperature-for-city").innerHTML = Math.round(
+    ((fahrenheitTemperature - 32) * 5) / 9
+  );
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
 }
 
 let celsiusLink = document.querySelector("#celsius-link");
@@ -132,4 +140,7 @@ celsiusLink.addEventListener("click", convertToCelsius);
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", convertToFahrenheit);
-*/
+
+let fahrenheitTemperature = null;
+
+search("New York");
