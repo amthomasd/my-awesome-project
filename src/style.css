@@ -13,32 +13,26 @@ h2 {
 }
 
 .additionalWeatherDetails {
-  margin-top: 40px;
+  margin-top: 48px;
+  text-align: center;
 }
 
 .locationInput {
   margin-top: 25px;
+  margin-left: 20px;
 }
 
 .searchButton {
-  margin-top: 20px;
+  margin-top: 25px;
 }
 
 .useCurrentLocationButton {
-  margin-top: 20px;
+  margin-top: 25px;
   float: left !important;
-  margin-left: -20px;
+  margin-left: -12px;
 }
 
 .currentCard {
-  text-align: left;
-}
-
-.dayOneCard {
-  border: transparent;
-}
-
-.card-body {
   text-align: center;
 }
 
@@ -52,17 +46,22 @@ h2 {
 .cityName {
   font-size: 35px;
   color: darkgray;
+  margin-left: 20px;
+  text-align: center;
 }
 
 .weatherImage {
   font-size: 70px;
-  position: relative;
+
   top: -20px;
+  text-align: center;
 }
 
 .temperatureText {
   font-size: 60px;
   color: darkgray;
+  text-align: center;
+  margin-top: -12px;
 }
 
 .unit {
